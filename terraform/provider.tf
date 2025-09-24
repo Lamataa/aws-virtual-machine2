@@ -7,9 +7,9 @@ terraform {
     }
   }
   backend "s3" {
-    bucket  = "aws-s3-tfstate-lamata"
-    key     = "tfstate"
-    region  = "us-east-1"
+    bucket       = "aws-s3-tfstate-lamata"
+    key          = "tfstate"
+    region       = "us-east-1"
     use_lockfile = true
   }
 }

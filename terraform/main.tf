@@ -6,10 +6,10 @@ module "network" {
 }
 
 module "vm" {
-  source           = "./modules/vm"
-  ami              = "ami-0c101f26f147fa7fd"
-  subnet_id        = module.network.subnet_id
-  security_group_id= module.network.security_group_id
-  user_data_path   = "./scripts/user_data.sh"
-  instance_type    = "t2.micro"
+  source            = "./modules/vm"
+  ami               = "ami-0c101f26f147fa7fd"
+  subnet_id         = module.network.subnet_id
+  security_group_id = module.network.security_group_id
+  user_data_path    = "./scripts/user_data.sh"
+  instance_type     = "t2.micro"
 }
