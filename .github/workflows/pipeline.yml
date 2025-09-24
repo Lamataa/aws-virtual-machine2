@@ -78,11 +78,8 @@ jobs:
       - name: Step 04 - Terraform Init
         run: terraform -chdir=./terraform init
 
-      - name: Step 05 - Terraform Plan
-        run: terraform -chdir=./terraform plan -out=tfplan
+      - name: Step 05 - Terraform Destroy
+        run: terraform -chdir=./terraform destroy -auto-approve
 
-      - name: Step 06 - Terraform Apply
-        run: terraform -chdir=./terraform apply tfplan
-
-      - name: Step 07 - Terraform Show
+      - name: Step 06 - Terraform Show
         run: terraform -chdir=./terraform show
