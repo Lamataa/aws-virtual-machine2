@@ -14,13 +14,9 @@ terraform {
     region       = "us-east-1" # ou variável para dinamizar
     use_lockfile = true
   }
-}
 
 provider "aws" {
-  region = var.aws_region
+  region = "us-east-1"
 }
 
-variable "aws_region" {
-  description = "AWS region to use"
-  default     = "us-east-1"
 }
